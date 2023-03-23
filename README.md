@@ -36,8 +36,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/html5css3sassindexeddb-R8W3mHjKFk)
+- Live Site URL: [Add live site URL here](https://shortenurllink.netlify.app/)
 
 ## My process
 
