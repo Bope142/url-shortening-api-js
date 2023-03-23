@@ -1,5 +1,6 @@
 import {
-    displayLinkList,EventUrlHistory,
+    displayLinkList,
+    EventUrlHistory,
 } from './ui.js';
 
 
@@ -14,6 +15,7 @@ export const IDBinitialization = ( ) => {
     DBOpenReq.addEventListener( 'success', ( e ) => {
         db = e.target.result
         urlHistory( )
+        document.querySelector( '.loader-section' ).style.display = "none"
     } )
     DBOpenReq.addEventListener( 'upgradeneeded', ( e ) => {
         db = e.target.result
@@ -35,7 +37,7 @@ export const urlHistory = async ( ) => {
 
         if ( e.target.result.length === 0 ) {
             console.log( 'no data in database' )
-            displayLinkList(e.target.result)
+            displayLinkList( e.target.result )
         } else {
             displayLinkList( e.target.result.reverse( ) )
             EventUrlHistory( )
