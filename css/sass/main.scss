@@ -13,7 +13,7 @@ html {
 
 body {
 
-    font-family: $Font;
+    font-family: $PoppinsMedium;
     position: relative;
     height: 100vh;
     -ms-overflow-style: none;
@@ -34,14 +34,14 @@ body::-webkit-scrollbar {
 }
 
 .link {
-    font-family: $Font;
+    font-family: $PoppinsMedium;
     font-size: 15px;
     font-weight: bolder;
 }
 
 .link-btn,
 .btn,button {
-    font-family: $Font;
+    font-family: $PoppinsMedium;
     font-size: 15px;
     font-weight: bolder;
     padding: 20px 40px;

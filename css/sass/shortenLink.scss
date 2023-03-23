@@ -46,7 +46,7 @@
                 padding: 20px;
                 border: 3px solid rgba($Secondary-1, 0);
                 outline: none;
-                font-family: $Font;
+                font-family: $PoppinsMedium;
                 font-size: 18px;
                 border-radius: 0.5rem;
                 position: relative;
@@ -57,7 +57,7 @@
                 color: $Secondary-1;
                 font-size: 17px;
                 font-style: italic;
-                font-family: $Font;
+                font-family: $PoppinsMedium;
                 position: absolute;
                 bottom: -40%;
                 opacity: 0;
@@ -98,7 +98,7 @@ overflow: hidden;
             text-overflow: ellipsis !important;
         }
         & .link-no-shorten {
-            font-family: $Font;
+            font-family: $PoppinsMedium;
             font-size: 17px;
             color: $Neutral-4;
             font-weight: 500;
@@ -111,7 +111,7 @@ overflow: hidden;
 
         & .link-shorted {
             margin-left: auto;
-            font-family: $Font;
+            font-family: $PoppinsMedium;
             font-size: 17px;
             color: $Primary-1;
             font-weight: 500;

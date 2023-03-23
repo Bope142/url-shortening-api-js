@@ -130,7 +130,7 @@ html {
 }
 
 body {
-  font-family: "Poppins-Bold", sans-serif;
+  font-family: "Poppins-Medium", sans-serif;
   position: relative;
   height: 100vh;
   -ms-overflow-style: none;
@@ -151,14 +151,14 @@ body::-webkit-scrollbar {
 }
 
 .link {
-  font-family: "Poppins-Bold", sans-serif;
+  font-family: "Poppins-Medium", sans-serif;
   font-size: 15px;
   font-weight: bolder;
 }
 
 .link-btn,
 .btn, button {
-  font-family: "Poppins-Bold", sans-serif;
+  font-family: "Poppins-Medium", sans-serif;
   font-size: 15px;
   font-weight: bolder;
   padding: 20px 40px;
@@ -308,7 +308,7 @@ body::-webkit-scrollbar {
 }
 .menu-mobile .link-mobile .nav__link {
   color: white;
-  font-family: "Poppins-Bold", sans-serif;
+  font-family: "Poppins-Medium", sans-serif;
   font-size: 1.2rem;
   font-weight: bolder;
 }
@@ -323,7 +323,7 @@ body::-webkit-scrollbar {
 }
 .menu-mobile .content-controll .link {
   color: white;
-  font-family: "Poppins-Bold", sans-serif;
+  font-family: "Poppins-Medium", sans-serif;
   font-size: 1.2rem;
   font-weight: bolder;
 }
@@ -470,7 +470,7 @@ body::-webkit-scrollbar {
   line-height: 3.8rem;
 }
 .container_section-banner .banner-text p {
-  font-family: "Poppins-Bold", sans-serif;
+  font-family: "Poppins-Medium", sans-serif;
   font-size: 18px;
   color: #9e9aa7;
 }
@@ -571,7 +571,7 @@ body::-webkit-scrollbar {
   padding: 20px;
   border: 3px solid rgba(244, 98, 98, 0);
   outline: none;
-  font-family: "Poppins-Bold", sans-serif;
+  font-family: "Poppins-Medium", sans-serif;
   font-size: 18px;
   border-radius: 0.5rem;
   position: relative;
@@ -581,7 +581,7 @@ body::-webkit-scrollbar {
   color: #f46262;
   font-size: 17px;
   font-style: italic;
-  font-family: "Poppins-Bold", sans-serif;
+  font-family: "Poppins-Medium", sans-serif;
   position: absolute;
   bottom: -40%;
   opacity: 0;
@@ -619,7 +619,7 @@ body::-webkit-scrollbar {
   text-overflow: ellipsis !important;
 }
 .shorten-history .link-short .link-no-shorten {
-  font-family: "Poppins-Bold", sans-serif;
+  font-family: "Poppins-Medium", sans-serif;
   font-size: 17px;
   color: #232127;
   font-weight: 500;
@@ -630,7 +630,7 @@ body::-webkit-scrollbar {
 }
 .shorten-history .link-short .link-shorted {
   margin-left: auto;
-  font-family: "Poppins-Bold", sans-serif;
+  font-family: "Poppins-Medium", sans-serif;
   font-size: 17px;
   color: #2acfcf;
   font-weight: 500;
@@ -717,7 +717,7 @@ body::-webkit-scrollbar {
   font-weight: bolder;
 }
 .container_section-statistics p {
-  font-family: "Poppins-Bold", sans-serif;
+  font-family: "Poppins-Medium", sans-serif;
   font-size: 18px;
   color: #9e9aa7;
   text-align: center;

@@ -17,7 +17,7 @@
         grid-row-gap: 25px;
 
         & h2 {
-            font-family: $Font;
+            font-family: $PoppinsBold;
             color: $Neutral-4;
             font-size: 3.5rem;
             font-weight: bolder;
@@ -25,7 +25,7 @@
         }
 
         & p {
-            font-family: $Font;
+            font-family: $PoppinsMedium;
             font-size: 18px;
             color: $Neutral-2;
         }
