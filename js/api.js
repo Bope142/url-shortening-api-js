@@ -2,6 +2,11 @@ import {
     addUrlHitory,
 } from './database.js';
 
+import {
+    loaderBtnShorten,
+} from './ui.js';
+
+
 export const shorteningLink = async (link)=>{
   let url = `https://api.shrtco.de/v2/shorten?url=${link}`;
   try {
@@ -18,5 +23,6 @@ export const renderUsers = async (result) =>{
     let data = result.result;
     await addUrlHitory(data.full_short_link,data.original_link)
     document.querySelector( 'input' ).value =""
+      loaderBtnShorten( false );
   }
 }

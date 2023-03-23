@@ -590,6 +590,11 @@ body::-webkit-scrollbar {
   opacity: 0;
   transition: all 0.3s linear;
 }
+.container_section-links-shortens .shorten-link-box .loading-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .container_section-links-shortens .shorten-link-box .btn {
   border: none;
   border-radius: 0.5rem;
@@ -599,6 +604,7 @@ body::-webkit-scrollbar {
   height: 100%;
   padding: 21px 30px;
   font-size: 18px;
+  transition: all 0.3s linear;
 }
 
 .shorten-history {
@@ -662,6 +668,49 @@ body::-webkit-scrollbar {
   transition: all 0.3s linear;
 }
 
+.loader-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: relative;
+  animation: rotate 1s linear infinite;
+}
+
+.loader-btn::before, .loader-btn::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  inset: 0px;
+  border-radius: 50%;
+  border: 5px solid #FFF;
+  animation: prixClipFix 2s linear infinite;
+}
+
+.loader-btn::after {
+  inset: 8px;
+  transform: rotate3d(90, 90, 0, 180deg);
+  border-color: #3b3054;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes prixClipFix {
+  0% {
+    clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0);
+  }
+  50% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0);
+  }
+  75%, 100% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%);
+  }
+}
 @media only screen and (max-width: 1200px) {
   .container_section-links-shortens {
     padding: 50px;

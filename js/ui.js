@@ -2,7 +2,6 @@ const copyToClipboard = async ( textElmentInput ) => {
     let r = await navigator.clipboard.writeText( textElmentInput ).then(
         ( ) => {
             /* clipboard successfully set */
-            alert( "valide" )
             return true
         },
         ( error ) => {
@@ -25,7 +24,6 @@ export const EventUrlHistory = ( ) => {
     //add  event listener copy button
     document.querySelectorAll( '.btn-copy-link' ).forEach( btnCopy => {
         btnCopy.addEventListener( 'click', async ( ) => {
-            alert( "Hello !!" );
             let result = await copyToClipboard( btnCopy.parentNode.children[ 1 ].innerText );
             if ( result ) {
                 btnCopy.classList.add( 'btn-copied-link' );
@@ -55,4 +53,14 @@ export const displayLinkList = async ( links ) => {
         } );
     }
 
+}
+
+export const loaderBtnShorten =(isActive)=>{
+    if(isActive){
+        document.querySelector('#btn-shortenLink').classList.add('loading-btn');
+        document.querySelector('#btn-shortenLink').innerHTML =`<span class="loader-btn"></span>`
+    }else{
+       document.querySelector('#btn-shortenLink').classList.remove('loading-btn');
+       document.querySelector('#btn-shortenLink').innerHTML =`Shorten It!`
+    }
 }
