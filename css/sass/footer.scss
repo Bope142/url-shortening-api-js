@@ -1,0 +1,128 @@
+.container_footer {
+    background: $Neutral-4;
+    padding: 50px 100px;
+    display: flex;
+    flex-direction: column;
+    grid-row-gap: 25px;
+}
+
+.top-footer {
+    display: flex;
+    grid-gap: 30px;
+
+    & .title_page {
+        font-family: $Font;
+        font-size: 1.8rem;
+        color: white;
+        font-weight: bolder;
+        margin-left: 0 !important;
+        align-self: flex-start !important;
+    }
+
+    & .links-list-footer {
+        margin-left: auto;
+        display: flex;
+        grid-gap: 50px;
+
+        & .link-footer {
+            display: flex;
+            flex-direction: column;
+            grid-row-gap: 20px;
+            & .title-link{
+              color: white;
+              font-weight: 600;
+            }
+            & .list-content {
+                display: flex;
+                flex-direction: column;
+                grid-row-gap: 5px;
+                & li a{
+                   color: $Neutral-1;
+                   transition: all 0.3s linear;
+                   &:hover{
+                    color: $Primary-1;
+                   }
+                }
+            }
+        }
+    }
+
+    & .social-media{
+      display: flex;
+      grid-gap:25px;
+      flex: none;
+      justify-content: center;
+      margin-left: 20px;
+      & a {
+        & svg{
+           transition: all 0.3s linear;
+           & *{
+             transition: all 0.3s linear;
+           }
+        }
+        &:hover{
+          & svg *{
+            fill:$Primary-1;
+          }
+        }
+
+
+      }
+    }
+}
+
+
+.attribution{
+  text-align: center;
+  border-top: 1px solid rgba($Neutral-2,0.2);
+  color:$Neutral-1;
+  padding-top: 25px;
+  & *{
+    font-size: 0.9rem;
+  }
+  & a{
+    color:$Primary-1;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+    .container_footer{
+        padding: 50px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .top-footer{
+        flex-direction: column;
+        align-items: center;
+        & .links-list-footer{
+          margin-left: 0;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 900px) {
+    .container_footer{
+        padding: 20px;
+    }
+}
+
+@media only screen and (max-width: 830px) {
+  .top-footer{
+    align-items: center;
+    & *{
+      text-align: center;
+    }
+        & .title_page{
+          align-self: center !important;
+          text-align: center !important;
+        }
+  }
+    .links-list-footer{
+      flex-direction: column !important;
+      & *{
+        text-align: center !important;
+      }
+    }
+}

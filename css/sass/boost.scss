@@ -1,0 +1,33 @@
+.container_section-boost {
+    padding: 50px 100px;
+    display: flex;
+    flex-direction: column;
+    grid-row-gap: 25px;
+    align-items: center;
+    justify-content: center;
+    background: url("../icons/bg-boost-desktop.svg") center/cover $Primary-2 no-repeat;
+
+    & a {
+        align-self: center;
+    }
+
+    & p {
+        align-self: center;
+        text-align: center;
+        font-family: $Font;
+        font-size: 3rem;
+        color: white;
+        font-weight: bolder;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .container_section-boost{
+        padding: 50px;
+    }
+}
+@media only screen and (max-width: 900px) {
+    .container_section-boost{
+        padding: 50px 20px;
+    }
+}

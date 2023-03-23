@@ -1,0 +1,22 @@
+/*Color varialble*/
+$Neutral-1:#016CFE;
+/*color variable primary*/
+$Primary-1:hsl(180, 66%, 49%);
+$Primary-2:hsl(257, 27%, 26%);
+
+/*color variable Secondary*/
+$Secondary-1:hsl(0, 87%, 67%);
+
+/*color variable Neutral*/
+$Neutral-1:hsl(0, 0%, 75%);
+$Neutral-2:hsl(257, 7%, 63%);
+$Neutral-3:hsl(255, 11%, 22%);
+$Neutral-4:hsl(260, 8%, 14%);
+
+/*font */
+$FontZise :18px;
+@font-face {
+    font-family: "Poppins";
+    src: url("https://fonts.google.com/specimen/Poppins");
+}
+$Font:"Poppins",sans-serif;

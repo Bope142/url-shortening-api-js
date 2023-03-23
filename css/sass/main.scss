@@ -1,0 +1,79 @@
+@import './reset.scss';
+@import './variable.scss';
+
+html {
+    scroll-behavior: smooth;
+    user-select: none;
+    background: rgba(0, 0, 0, 0.03);
+}
+
+* {
+    scroll-behavior: smooth !important;
+}
+
+body {
+
+    font-family: $Font;
+    position: relative;
+    height: 100vh;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    padding: 0;
+    overflow: scroll;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.link {
+    font-family: $Font;
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+.link-btn,
+.btn,button {
+    font-family: $Font;
+    font-size: 15px;
+    font-weight: bolder;
+    padding: 20px 40px;
+    background: $Primary-1;
+    border-radius: 2rem;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    align-self: flex-start;
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 0;
+        transition: all 0.3s linear;
+        background: rgba(255, 255, 255, 0.5);
+    }
+
+    &:hover {
+        &::after {
+            width: 100%;
+        }
+
+    }
+}
+
+@import './header.scss';
+@import './banner.scss';
+@import './shortenLink.scss';
+@import './state.scss';
+@import './boost.scss';
+@import './footer.scss';
