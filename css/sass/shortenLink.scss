@@ -35,6 +35,9 @@
                 &::placeholder {
                     color: rgba($Secondary-1, 0.5);
                 }
+                &:focus{
+                    color: $Neutral-4;
+                }
             }
 
             & input {

@@ -100,6 +100,22 @@ li {
 /*color variable Neutral*/
 /*font */
 @font-face {
+  font-family: "Poppins-Bold";
+  src: url("../fonts/Poppins-Bold.ttf");
+}
+@font-face {
+  font-family: "Poppins-Medium";
+  src: url("../fonts/Poppins-Medium.ttf");
+}
+@font-face {
+  font-family: "Poppins-Regular";
+  src: url("../fonts/Poppins-Regular.ttf");
+}
+@font-face {
+  font-family: "Poppins-Light";
+  src: url("../fonts/Poppins-Light.ttf");
+}
+@font-face {
   font-family: "Poppins";
   src: url("https://fonts.google.com/specimen/Poppins");
 }
@@ -114,7 +130,7 @@ html {
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins-Bold", sans-serif;
   position: relative;
   height: 100vh;
   -ms-overflow-style: none;
@@ -135,14 +151,14 @@ body::-webkit-scrollbar {
 }
 
 .link {
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins-Bold", sans-serif;
   font-size: 15px;
   font-weight: bolder;
 }
 
 .link-btn,
 .btn, button {
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins-Bold", sans-serif;
   font-size: 15px;
   font-weight: bolder;
   padding: 20px 40px;
@@ -183,7 +199,7 @@ body::-webkit-scrollbar {
 .container_header .title_page {
   margin-left: 100px;
   margin-right: 50px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins-Bold", sans-serif;
   font-size: 1.8rem;
   color: #232127;
   font-weight: bolder;
@@ -292,7 +308,7 @@ body::-webkit-scrollbar {
 }
 .menu-mobile .link-mobile .nav__link {
   color: white;
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins-Bold", sans-serif;
   font-size: 1.2rem;
   font-weight: bolder;
 }
@@ -307,7 +323,7 @@ body::-webkit-scrollbar {
 }
 .menu-mobile .content-controll .link {
   color: white;
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins-Bold", sans-serif;
   font-size: 1.2rem;
   font-weight: bolder;
 }
@@ -447,14 +463,14 @@ body::-webkit-scrollbar {
   grid-row-gap: 25px;
 }
 .container_section-banner .banner-text h2 {
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins-Bold", sans-serif;
   color: #232127;
   font-size: 3.5rem;
   font-weight: bolder;
   line-height: 3.8rem;
 }
 .container_section-banner .banner-text p {
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins-Bold", sans-serif;
   font-size: 18px;
   color: #9e9aa7;
 }
@@ -546,13 +562,16 @@ body::-webkit-scrollbar {
 .container_section-links-shortens .shorten-link-box .box .invalid-input::placeholder {
   color: rgba(244, 98, 98, 0.5);
 }
+.container_section-links-shortens .shorten-link-box .box .invalid-input:focus {
+  color: #232127;
+}
 .container_section-links-shortens .shorten-link-box .box input {
   height: 100%;
   width: 100%;
   padding: 20px;
   border: 3px solid rgba(244, 98, 98, 0);
   outline: none;
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins-Bold", sans-serif;
   font-size: 18px;
   border-radius: 0.5rem;
   position: relative;
@@ -562,7 +581,7 @@ body::-webkit-scrollbar {
   color: #f46262;
   font-size: 17px;
   font-style: italic;
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins-Bold", sans-serif;
   position: absolute;
   bottom: -40%;
   opacity: 0;
@@ -600,7 +619,7 @@ body::-webkit-scrollbar {
   text-overflow: ellipsis !important;
 }
 .shorten-history .link-short .link-no-shorten {
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins-Bold", sans-serif;
   font-size: 17px;
   color: #232127;
   font-weight: 500;
@@ -611,7 +630,7 @@ body::-webkit-scrollbar {
 }
 .shorten-history .link-short .link-shorted {
   margin-left: auto;
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins-Bold", sans-serif;
   font-size: 17px;
   color: #2acfcf;
   font-weight: 500;
@@ -692,13 +711,13 @@ body::-webkit-scrollbar {
 .container_section-statistics .title {
   align-self: center;
   text-align: center;
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins-Bold", sans-serif;
   font-size: 3rem;
   color: #232127;
   font-weight: bolder;
 }
 .container_section-statistics p {
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins-Bold", sans-serif;
   font-size: 18px;
   color: #9e9aa7;
   text-align: center;
@@ -739,7 +758,7 @@ body::-webkit-scrollbar {
   flex: none;
 }
 .statistic .title-stats {
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins-Bold", sans-serif;
   font-size: 1.3rem;
   color: #232127;
   font-weight: bolder;
@@ -864,7 +883,7 @@ body::-webkit-scrollbar {
 .container_section-boost p {
   align-self: center;
   text-align: center;
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins-Bold", sans-serif;
   font-size: 3rem;
   color: white;
   font-weight: bolder;
@@ -893,7 +912,7 @@ body::-webkit-scrollbar {
   grid-gap: 30px;
 }
 .top-footer .title_page {
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins-Bold", sans-serif;
   font-size: 1.8rem;
   color: white;
   font-weight: bolder;
