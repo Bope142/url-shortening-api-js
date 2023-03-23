@@ -1,0 +1,235 @@
+.container_section-links-shortens {
+    background: rgba(0, 0, 0, 0.03);
+    padding: 100px;
+    padding-top: 0;
+    display: flex;
+    flex-direction: column;
+    grid-row-gap: 0;
+
+    & .shorten-link-box {
+        background: url("../icons/bg-shorten-desktop.svg") left/cover $Primary-2;
+        height: auto;
+        flex: none;
+        padding: 30px;
+        align-self: stretch;
+        border-radius: 0.5rem;
+        transform: translateY(-50%);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: 15px;
+        position: relative;
+
+        & .box {
+            display: flex;
+            flex-direction: column;
+            grid-row-gap: 15px;
+            height: 100%;
+            width: 100%;
+            position: relative;
+
+            & .invalid-input {
+                border-color: rgba($Secondary-1, 1.0);
+                color: $Secondary-1;
+
+                &::placeholder {
+                    color: rgba($Secondary-1, 0.5);
+                }
+                &:focus{
+                    color: $Neutral-4;
+                }
+            }
+
+            & input {
+                height: 100%;
+                width: 100%;
+                padding: 20px;
+                border: 3px solid rgba($Secondary-1, 0);
+                outline: none;
+                font-family: $PoppinsMedium;
+                font-size: 18px;
+                border-radius: 0.5rem;
+                position: relative;
+                transition: all 0.3s linear;
+            }
+
+            & .error-msg {
+                color: $Secondary-1;
+                font-size: 17px;
+                font-style: italic;
+                font-family: $PoppinsMedium;
+                position: absolute;
+                bottom: -40%;
+                opacity: 0;
+                transition: all 0.3s linear;
+
+            }
+        }
+        & .loading-btn{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        & .btn {
+            border: none;
+            border-radius: 0.5rem;
+            outline: none;
+            cursor: pointer;
+            flex: none;
+            height: 100%;
+            padding: 21px 30px;
+            font-size: 18px;
+            transition: all 0.3s linear;
+
+        }
+    }
+}
+
+.shorten-history {
+    display: flex;
+    flex-direction: column;
+    grid-row-gap: 15px;
+    width: 100%;
+overflow: hidden;
+    & .link-short {
+        padding: 25px;
+        border-radius: 0.3rem;
+        flex: none;
+        background: white;
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+        align-items: center;
+        display: flex;
+        overflow: hidden;
+        & *{
+            text-overflow: ellipsis !important;
+        }
+        & .link-no-shorten {
+            font-family: $PoppinsMedium;
+            font-size: 17px;
+            color: $Neutral-4;
+            font-weight: 500;
+            transition: all 0.3s linear;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        & .link-shorted {
+            margin-left: auto;
+            font-family: $PoppinsMedium;
+            font-size: 17px;
+            color: $Primary-1;
+            font-weight: 500;
+            transition: all 0.3s linear;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        & .btn-copied-link {
+            background: $Primary-2 !important;
+            transition: all 0.3s linear;
+            &::after{
+                opacity: 0 !important;
+            }
+        }
+
+        & .btn-copy-link {
+            border: none;
+            border-radius: 0.2rem;
+            outline: none;
+            cursor: pointer;
+            flex: none;
+            padding: 10px 25px;
+            width: 150px;
+            font-size: 15px;
+            margin-left: 15px;
+            transition: all 0.3s linear;
+        }
+    }
+}
+
+.loader-btn {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        position: relative;
+        animation: rotate 1s linear infinite
+      }
+      .loader-btn::before , .loader-btn::after {
+        content: "";
+        box-sizing: border-box;
+        position: absolute;
+        inset: 0px;
+        border-radius: 50%;
+        border: 5px solid #FFF;
+        animation: prixClipFix 2s linear infinite ;
+      }
+      .loader-btn::after{
+        inset: 8px;
+        transform: rotate3d(90, 90, 0, 180deg );
+        border-color: $Primary-2;
+      }
+
+      @keyframes rotate {
+        0%   {transform: rotate(0deg)}
+        100%   {transform: rotate(360deg)}
+      }
+
+      @keyframes prixClipFix {
+          0%   {clip-path:polygon(50% 50%,0 0,0 0,0 0,0 0,0 0)}
+          50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0,100% 0,100% 0)}
+          75%, 100%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
+      }
+
+@media only screen and (max-width: 1200px) {
+    .container_section-links-shortens {
+        padding: 50px;
+        padding-top: 0;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    .link-short {
+        flex-direction: column !important;
+        grid-row-gap: 15px !important;
+        align-items: stretch !important;
+        padding-left: 0!important;
+        padding-right: 0!important;
+        & .link-shorted{
+            margin-left: 0 !important;
+            padding: 0 25px !important;
+        }
+         & .link-no-shorten{
+            border-bottom: 1px solid rgba($Neutral-2,0.3) !important;
+            padding: 0 25px 15px 25px !important;
+            //padding-bottom: 15px;
+         }
+        & .btn-copy-link{
+            align-self: stretch!important;
+            width: auto !important;
+            margin: 0 25px !important;
+        }
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .container_section-links-shortens {
+        padding: 20px;
+        padding-top: 0;
+    }
+}
+
+
+
+@media only screen and (max-width: 700px) {
+    .shorten-link-box {
+       flex-direction: column !important;
+       grid-row-gap: 50px !important;
+       & button{
+        align-self: stretch !important;
+       }
+    }
+}
