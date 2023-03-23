@@ -158,9 +158,9 @@ body::-webkit-scrollbar {
 
 .link-btn,
 .btn, button {
-  font-family: "Poppins-Medium", sans-serif;
-  font-size: 15px;
-  font-weight: bolder;
+  font-family: "Poppins-Bold", sans-serif !important;
+  font-size: 18px !important;
+  font-weight: none !important;
   padding: 20px 40px;
   background: #2acfcf;
   border-radius: 2rem;
@@ -176,13 +176,14 @@ body::-webkit-scrollbar {
   left: 0;
   top: 0;
   height: 100%;
-  width: 0;
+  width: 100%;
+  opacity: 0;
   transition: all 0.3s linear;
   background: rgba(255, 255, 255, 0.5);
 }
-.link-btn:hover::after,
-.btn:hover::after, button:hover::after {
-  width: 100%;
+.link-btn:active::after,
+.btn:active::after, button:active::after {
+  opacity: 1;
 }
 
 .container_header {
@@ -202,7 +203,6 @@ body::-webkit-scrollbar {
   font-family: "Poppins-Bold", sans-serif;
   font-size: 1.8rem;
   color: #232127;
-  font-weight: bolder;
   align-self: center;
 }
 .container_header .header__nav {
@@ -213,7 +213,9 @@ body::-webkit-scrollbar {
 }
 .container_header .header__nav .nav__link {
   color: #9e9aa7;
+  font-size: 18px;
   transition: all 0.3s linear;
+  font-family: "Poppins-Bold", sans-serif !important;
 }
 .container_header .header__nav .nav__link:hover {
   color: #232127;
@@ -230,6 +232,9 @@ body::-webkit-scrollbar {
 .container_header .header_button-contains .link {
   color: #9e9aa7;
   transition: all 0.3s linear;
+  font-size: 18px !important;
+  font-family: "Poppins-Bold", sans-serif !important;
+  font-weight: none !important;
 }
 .container_header .header_button-contains .link:hover {
   color: #232127;
@@ -308,9 +313,8 @@ body::-webkit-scrollbar {
 }
 .menu-mobile .link-mobile .nav__link {
   color: white;
-  font-family: "Poppins-Medium", sans-serif;
-  font-size: 1.2rem;
-  font-weight: bolder;
+  font-family: "Poppins-Bold", sans-serif;
+  font-size: 1.3rem;
 }
 .menu-mobile .content-controll {
   margin-top: 25px;
@@ -323,9 +327,8 @@ body::-webkit-scrollbar {
 }
 .menu-mobile .content-controll .link {
   color: white;
-  font-family: "Poppins-Medium", sans-serif;
-  font-size: 1.2rem;
-  font-weight: bolder;
+  font-family: "Poppins-Bold", sans-serif;
+  font-size: 1.3rem;
 }
 .menu-mobile .content-controll .link-btn {
   align-self: stretch;
@@ -595,7 +598,7 @@ body::-webkit-scrollbar {
   flex: none;
   height: 100%;
   padding: 21px 30px;
-  font-size: 15px;
+  font-size: 18px;
 }
 
 .shorten-history {
@@ -643,6 +646,9 @@ body::-webkit-scrollbar {
   background: #3b3054 !important;
   transition: all 0.3s linear;
 }
+.shorten-history .link-short .btn-copied-link::after {
+  opacity: 0 !important;
+}
 .shorten-history .link-short .btn-copy-link {
   border: none;
   border-radius: 0.2rem;
@@ -650,7 +656,7 @@ body::-webkit-scrollbar {
   cursor: pointer;
   flex: none;
   padding: 10px 25px;
-  width: 120px;
+  width: 150px;
   font-size: 15px;
   margin-left: 15px;
   transition: all 0.3s linear;

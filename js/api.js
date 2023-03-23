@@ -8,7 +8,6 @@ export const shorteningLink = async (link)=>{
      let response = await fetch(url);
      let data = await response.json();
      renderUsers(data)
-     console.warn(data)
   } catch(error) {
     console.error(error);
   }
@@ -17,6 +16,7 @@ export const shorteningLink = async (link)=>{
 export const renderUsers = async (result) =>{
   if(result.ok){
     let data = result.result;
-    addUrlHitory(data.full_short_link,data.original_link)
+    await addUrlHitory(data.full_short_link,data.original_link)
+    document.querySelector( 'input' ).value =""
   }
 }

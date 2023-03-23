@@ -15,7 +15,6 @@ const checkUrl = ( string ) => {
         console.log( "error is", error );
         return false;
     }
-    console.warn( givenURL )
     return true;
 }
 

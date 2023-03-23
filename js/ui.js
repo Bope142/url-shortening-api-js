@@ -1,22 +1,17 @@
-let inputTextCopy = document.createElement( 'input' )
-inputTextCopy.setAttribute( 'type', 'text' )
-inputTextCopy.setAttribute( 'id', 'inputCopy' )
-
-const copyToClipboard = ( textElmentInput ) => {
-    try {
-        if ( textElmentInput.value.length > 0 ) {
-            textElmentInput.select( );
-            textElmentInput.setSelectionRange( 0, 99999 );
-            navigator.clipboard.writeText( textElmentInput.value );
-            window.navigator.vibrate( 300 );
-            return true;
-        } else {
-            return false;
+const copyToClipboard = async ( textElmentInput ) => {
+    let r = await navigator.clipboard.writeText( textElmentInput ).then(
+        ( ) => {
+            /* clipboard successfully set */
+            alert( "valide" )
+            return true
+        },
+        ( error ) => {
+            /* clipboard write failed */
+            alert( 'error on copy link to clipboard...' + error )
+            return false
         }
-    } catch {
-        console.log( 'error on copy password to clipboard...' );
-        return false;
-    }
+    );
+    return r
 }
 
 export const EventUrlHistory = ( ) => {
@@ -24,20 +19,23 @@ export const EventUrlHistory = ( ) => {
     document.querySelectorAll( '.btn-copy-link' ).forEach( btnCopy => {
         btnCopy.removeEventListener( 'click', ( ) => {
             inputTextCopy.value = btnCopy.parentNode.children[ 1 ].innerText
-            copyToClipboard( inputTextCopy )
+            copyToClipboard( btnCopy.parentNode.children[ 1 ].innerText )
         } )
     } )
     //add  event listener copy button
     document.querySelectorAll( '.btn-copy-link' ).forEach( btnCopy => {
-        btnCopy.addEventListener( 'click', ( ) => {
-            inputTextCopy.value = btnCopy.parentNode.children[ 1 ].innerText
-            if ( copyToClipboard( inputTextCopy ) ) {
+        btnCopy.addEventListener( 'click', async ( ) => {
+            alert( "Hello !!" );
+            let result = await copyToClipboard( btnCopy.parentNode.children[ 1 ].innerText );
+            if ( result ) {
                 btnCopy.classList.add( 'btn-copied-link' );
                 btnCopy.innerHTML = 'Copied !';
                 let idTimer = setTimeout( ( ) => {
                     btnCopy.classList.remove( 'btn-copied-link' );
                     btnCopy.innerHTML = 'Copy';
                 }, 2500 )
+            } else {
+                alert( "error on copy link to clipboard..." );
             }
         } )
     } )

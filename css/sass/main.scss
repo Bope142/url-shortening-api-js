@@ -41,9 +41,9 @@ body::-webkit-scrollbar {
 
 .link-btn,
 .btn,button {
-    font-family: $PoppinsMedium;
-    font-size: 15px;
-    font-weight: bolder;
+    font-family: $PoppinsBold  !important;
+    font-size: 18px !important;
+    font-weight: none !important;
     padding: 20px 40px;
     background: $Primary-1;
     border-radius: 2rem;
@@ -58,14 +58,15 @@ body::-webkit-scrollbar {
         left: 0;
         top: 0;
         height: 100%;
-        width: 0;
+        width: 100%;
+        opacity: 0;
         transition: all 0.3s linear;
         background: rgba(255, 255, 255, 0.5);
     }
 
-    &:hover {
+    &:active {
         &::after {
-            width: 100%;
+           opacity: 1.0;
         }
 
     }

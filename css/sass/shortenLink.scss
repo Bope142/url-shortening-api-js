@@ -74,7 +74,7 @@
             flex: none;
             height: 100%;
             padding: 21px 30px;
-            font-size: 15px;
+            font-size: 18px;
         }
     }
 }
@@ -125,6 +125,9 @@ overflow: hidden;
         & .btn-copied-link {
             background: $Primary-2 !important;
             transition: all 0.3s linear;
+            &::after{
+                opacity: 0 !important;
+            }
         }
 
         & .btn-copy-link {
@@ -134,7 +137,7 @@ overflow: hidden;
             cursor: pointer;
             flex: none;
             padding: 10px 25px;
-            width: 120px;
+            width: 150px;
             font-size: 15px;
             margin-left: 15px;
             transition: all 0.3s linear;

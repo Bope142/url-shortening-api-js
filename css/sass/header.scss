@@ -14,7 +14,6 @@ box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
         font-family: $PoppinsBold;
         font-size: 1.8rem;
         color: $Neutral-4;
-        font-weight: bolder;
         align-self: center;
     }
 
@@ -26,8 +25,9 @@ box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
         & .nav__link {
             color: $Neutral-2;
+            font-size: 18px;
             transition: all 0.3s linear;
-
+            font-family: $PoppinsBold !important;
             &:hover {
                 color: $Neutral-4;
             }
@@ -46,7 +46,9 @@ box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
         & .link {
             color: $Neutral-2;
             transition: all 0.3s linear;
-
+            font-size: 18px !important;
+            font-family: $PoppinsBold !important;
+            font-weight: none !important;
             &:hover {
                 color: $Neutral-4;
             }
@@ -126,9 +128,9 @@ box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
         & .nav__link {
             color: white;
-            font-family: $PoppinsMedium;
-            font-size: 1.2rem;
-            font-weight: bolder;
+            font-family: $PoppinsBold;
+            font-size: 1.3rem;
+            // font-weight: bolder;
         }
     }
 
@@ -142,9 +144,9 @@ box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
         padding-top: 50px;
         & .link {
             color: white;
-            font-family: $PoppinsMedium;
-            font-size: 1.2rem;
-            font-weight: bolder;
+            font-family: $PoppinsBold;
+            font-size: 1.3rem;
+            // font-weight: bolder;
         }
 
         & .link-btn {
